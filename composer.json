@@ -1,0 +1,24 @@
+{
+    "name": "serverdensity/MendedString",
+    "description": "Library for detecting unicode strings with single byte encoded UTF8 characters in them",
+    "authors": [
+        {
+            "name": "Wes Mason",
+            "email": "wes@serverdensity.com"
+        },
+        {
+            "name": "Server Density",
+            "email": "hello@serverdensity.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3"
+    },
+    "require-dev": {
+        "EHER/PHPUnit": "1.6",
+        "mockery/mockery": "0.7.*"
+    },
+    "autoload": {
+        "psr-0": {"ServerDensity": "src/"}
+    }
+}
