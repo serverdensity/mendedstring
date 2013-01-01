@@ -1,5 +1,5 @@
 {
-    "name": "serverdensity/MendedString",
+    "name": "serverdensity/mendedstring",
     "description": "Library for detecting unicode strings with single byte encoded UTF8 characters in them",
     "authors": [
         {
@@ -15,8 +15,7 @@
         "php": ">=5.3"
     },
     "require-dev": {
-        "EHER/PHPUnit": "1.6",
-        "mockery/mockery": "0.7.*"
+        "EHER/PHPUnit": "1.6"
     },
     "autoload": {
         "psr-0": {"ServerDensity": "src/"}
