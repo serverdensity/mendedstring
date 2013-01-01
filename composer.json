@@ -1,6 +1,7 @@
 {
     "name": "serverdensity/mendedstring",
     "description": "Library for detecting unicode strings with single byte encoded UTF8 characters in them",
+	"license": "BSD",
     "authors": [
         {
             "name": "Wes Mason",
