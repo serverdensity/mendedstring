@@ -1,9 +1,10 @@
 {
     "name": "serverdensity/mendedstring",
-	"type": "library",
-	"keywords": ["strings", "unicode", "utf8", "utf8_encode", "utf8_decode", "multibyte", "singlebyte"],
+    "homepage": "https://github.com/serverdensity/mendedstring",
+    "type": "library",
+    "keywords": ["strings", "unicode", "utf8", "utf8_encode", "utf8_decode", "multibyte", "singlebyte"],
     "description": "Library for detecting unicode strings with single byte encoded UTF8 characters in them",
-	"license": "BSD",
+    "license": "BSD",
     "authors": [
         {
             "name": "Wes Mason",
@@ -12,7 +13,7 @@
         {
             "name": "Server Density",
             "email": "hello@serverdensity.com",
-			"homepage": "https://www.serverdensity.com/"
+            "homepage": "https://www.serverdensity.com/"
         }
     ],
     "require": {
