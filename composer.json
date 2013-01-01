@@ -9,7 +9,8 @@
         },
         {
             "name": "Server Density",
-            "email": "hello@serverdensity.com"
+            "email": "hello@serverdensity.com",
+			"homepage": "https://www.serverdensity.com/"
         }
     ],
     "require": {
