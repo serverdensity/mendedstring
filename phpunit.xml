@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit>
+<filter>
+    <blacklist>
+        <directory suffix=".php">vendor</directory>
+    </blacklist>
+    <whitelist>
+        <directory suffix=".php">tests/</directory>
+        <exclude>
+            <file suffix=".php">vendor/autoload.php</file>
+        </exclude>
+    </whitelist>
+</filter>
+<listeners>
+    <listener class="\Mockery\Adapter\Phpunit\TestListener"
+              file="vendor/mockery/mockery/library/Mockery/Adapter/Phpunit/TestListener.php">
+    </listener>
+</listeners>
+</phpunit>
