@@ -23,7 +23,7 @@ class MendedString
     {
         if (!is_string($original))
         {
-            throw new InvalidArgumentException('$original should be a string, received "' . $original . '" of type "' . gettype($original) . '"');
+            throw new \InvalidArgumentException('$original should be a string, received "' . $original . '" of type "' . gettype($original) . '"');
         }
 
         $this->_original = $original;
