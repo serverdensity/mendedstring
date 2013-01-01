@@ -95,12 +95,12 @@ class MendedString
         return $this->_converted;
     }
 
-    protected function __toString()
+    public function __toString()
     {
         return $this->getConverted();
     }
 
-    protected function __get($name)
+    public function __get($name)
     {
         if ($name === 'original')
         {
