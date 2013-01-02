@@ -1,7 +1,7 @@
 <?php
 // ex: set tabstop=4 shiftwidth=4 expandtab:
 
-namespace ServerDensity;
+namespace ServerDensity\MendedString;
 
 class MendedString
 {

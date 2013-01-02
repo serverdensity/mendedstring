@@ -2,6 +2,7 @@
 // ex: set tabstop=4 shiftwidth=4 expandtab fileencoding=utf-8:
 //
 require_once dirname(__FILE__) . '/../vendor/autoload.php';
+use \ServerDensity\MendedString\MendedString;
 
 class MendedStringTest extends \PHPUnit_Framework_TestCase
 {
@@ -15,28 +16,28 @@ class MendedStringTest extends \PHPUnit_Framework_TestCase
     {
         $failed = 0;
         try {
-            new \ServerDensity\MendedString(null);
+            new MendedString(null);
         }
         catch (InvalidArgumentException $e)
         {
             $failed++;
         }
         try {
-            new \ServerDensity\MendedString(1);
+            new MendedString(1);
         }
         catch (InvalidArgumentException $e)
         {
             $failed++;
         }
         try {
-            new \ServerDensity\MendedString(false);
+            new MendedString(false);
         }
         catch (InvalidArgumentException $e)
         {
             $failed++;
         }
         try {
-            new \ServerDensity\MendedString(1.0);
+            new MendedString(1.0);
         }
         catch (InvalidArgumentException $e)
         {
@@ -47,7 +48,7 @@ class MendedStringTest extends \PHPUnit_Framework_TestCase
 
     public function testAsciiString()
     {
-        $mended = new \ServerDensity\MendedString($this->plainString);
+        $mended = new MendedString($this->plainString);
         $this->assertEquals($this->plainString, (string)$mended);
     }
 
@@ -55,7 +56,7 @@ class MendedStringTest extends \PHPUnit_Framework_TestCase
     {
         $decoded = $this->plainString . $this->utf8String;
 
-        $mended = new \ServerDensity\MendedString($decoded);
+        $mended = new MendedString($decoded);
 
         $this->assertEquals($decoded, (string)$mended);
     }
@@ -65,7 +66,7 @@ class MendedStringTest extends \PHPUnit_Framework_TestCase
         $decoded = $this->plainString . $this->utf8String;
         $encoded = utf8_encode($decoded);
 
-        $mended = new \ServerDensity\MendedString($encoded);
+        $mended = new MendedString($encoded);
 
         $this->assertEquals($decoded, (string)$mended);
         $this->assertNotEquals($encoded, (string)$mended);
@@ -79,7 +80,7 @@ class MendedStringTest extends \PHPUnit_Framework_TestCase
         $encoded .= utf8_encode($this->utf8String);
         $encoded = utf8_encode($encoded);
 
-        $mended = new \ServerDensity\MendedString($encoded);
+        $mended = new MendedString($encoded);
 
         $this->assertEquals($decoded, (string)$mended);
         $this->assertNotEquals($encoded, (string)$mended);

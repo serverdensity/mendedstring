@@ -1,7 +1,7 @@
 serverdensity/mendedstring
 ==========================
 
-A PHP class for detecting unicode strings with single byte encoded UTF-8 characters in them,
+*MendedString* is a PHP class for detecting unicode strings with single byte encoded UTF-8 characters in them,
 for example like those created by using PHP's `utf8_encode()` function on a string with non-ASCII
 characters in it and then saving to a data source that supports full UTF-8 encoding, like MongoDB.
 
@@ -29,16 +29,19 @@ Otherwise you'll need to include/require `mendedstring/src/ServerDensity/MendedS
 Usage
 -----
 
-To fix a broken (or possibly broken) string with unicode characters in just pass the string into a new `\ServerDensity\MendedString` instance.
+To fix a broken (or possibly broken) string with unicode characters in just pass the string into a new
+`\ServerDensity\MendedString\MendedString` instance.
 Each instance is immutable, so to fix a new string you need to create a new instance, e.g.:
 
 ```php
-use \ServerDensity\MendedString;
+use \ServerDensity\MendedString\MendedString;
+// The MendedString class exists in the MendedString module to make autoloading
+// a bit more efficient.
 
 $broken = utf8_encode('hello world' . utf8_encode('«ταБЬℓσ»'));
 $mended = new MendedString($broken);
 
-// Mended strings are lazy-converted, you either have to called ->getConverted()
+// Mended strings are lazy-converted, you either have to call ->getConverted()
 // or use it as a string (e.g. cast it, concat it with another string etc.) like so:
 echo (string)$mended;
 ```
@@ -46,4 +49,4 @@ echo (string)$mended;
 License
 -------
 
-*MendedString* is BSD license, feel free to use and abuse, but keep the `LICENSE` file intact.
+*MendedString* is BSD licensed, feel free to use and abuse, but keep the `LICENSE` file intact.
