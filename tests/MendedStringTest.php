@@ -1,5 +1,7 @@
 <?php
 // ex: set tabstop=4 shiftwidth=4 expandtab fileencoding=utf-8:
+//
+require_once dirname(__FILE__) . '/../vendor/autoload.php';
 
 class MendedStringTest extends \PHPUnit_Framework_TestCase
 {
