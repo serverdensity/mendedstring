@@ -5,7 +5,7 @@ serverdensity/mendedstring
 for example like those created by using PHP's `utf8_encode()` function on a string with non-ASCII
 characters in it and then saving to a data source that supports full UTF-8 encoding, like MongoDB.
 
-[![Build Status](https://travis-ci.org/serverdensity/mendestring.png?branch=master)](https://travis-ci.org/serverdensity/mendedstring)
+[![Build Status](https://travis-ci.org/serverdensity/mendedstring.png?branch=master)](https://travis-ci.org/serverdensity/mendedstring)
 
 Use case
 --------
